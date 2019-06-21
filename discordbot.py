@@ -7,7 +7,7 @@ CHANNEL_ID = ********** #チャンネルID
 client = discord.Client()
 
 # 60秒に一回ループ
-@tasks.loop(seconds=60)
+@tasks.loop(seconds=5)
 async def loop():
     channel = client.get_channel(CHANNEL_ID)
     await channel.send('時間だよ')  
